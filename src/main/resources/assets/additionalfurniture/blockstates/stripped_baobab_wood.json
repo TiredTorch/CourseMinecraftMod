@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "additionalfurniture:block/stripped_baobab_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "additionalfurniture:block/stripped_baobab_wood"
+    },
+    "axis=z": {
+      "model": "additionalfurniture:block/stripped_baobab_wood",
+      "x": 90
+    }
+  }
+}
