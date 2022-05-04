@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "additionalfurniture:block/baobab_sapling"
+  }
+}

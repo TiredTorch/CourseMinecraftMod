@@ -3,5 +3,9 @@
   "block.additionalfurniture.baobab_planks": "Baobab Planks",
   "block.additionalfurniture.baobab_wood": "Baobab Wood",
   "block.additionalfurniture.stripped_baobab_log": "Stripped Baobab Log",
-  "block.additionalfurniture.stripped_baobab_wood": "Stripped Baobab Wood"
+  "block.additionalfurniture.stripped_baobab_wood": "Stripped Baobab Wood",
+  "block.additionalfurniture.baobab_leaves": "Baobab Leaves",
+  "block.additionalfurniture.baobab_sapling": "Baobab Sapling",
+
+  "itemGroup.main_tab": "Additional Furniture"
 }

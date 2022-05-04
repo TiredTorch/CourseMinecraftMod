@@ -2,12 +2,9 @@ package net.trtorch.additionalfurniture.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -19,9 +16,8 @@ import net.trtorch.additionalfurniture.AdditionalFurniture;
 import net.trtorch.additionalfurniture.block.custom.ModFlammableRotatedPillarBlock;
 import net.trtorch.additionalfurniture.item.ModCreativeModeTab;
 import net.trtorch.additionalfurniture.item.ModItems;
-import org.jetbrains.annotations.Nullable;
+import net.trtorch.additionalfurniture.world.feature.tree.BaobabTreeGrower;
 
-import java.util.List;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -61,6 +57,28 @@ public class ModBlocks {
                     return 5;
                 }
             }, ModCreativeModeTab.ADDFUR_TAB);
+
+    public static final RegistryObject<Block> BAOBAB_LEAVES = registerBlock("baobab_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
+                    return 30;
+                }
+            }, ModCreativeModeTab.ADDFUR_TAB);
+
+
+    public static final RegistryObject<Block> BAOBAB_SAPLING = registerBlock("baobab_sapling",
+            () -> new SaplingBlock(new BaobabTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.ADDFUR_TAB);
 
     //Registration methods
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
