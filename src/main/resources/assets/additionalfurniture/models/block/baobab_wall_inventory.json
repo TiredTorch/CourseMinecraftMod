@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "additionalfurniture:block/baobab_planks"
+  }
+}

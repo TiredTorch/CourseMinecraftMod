@@ -6,6 +6,10 @@
   "block.additionalfurniture.stripped_baobab_wood": "Stripped Baobab Wood",
   "block.additionalfurniture.baobab_leaves": "Baobab Leaves",
   "block.additionalfurniture.baobab_sapling": "Baobab Sapling",
-
+  "block.additionalfurniture.baobab_slab": "Baobab Slab",
+  "block.additionalfurniture.baobab_stairs": "Baobab Stairs",
+  "block.additionalfurniture.baobab_fence": "Baobab Fence",
+  "block.additionalfurniture.baobab_wall": "Baobab Wall",
+  "block.additionalfurniture.baobab_fence_gate": "Baobab Fence Gate",
   "itemGroup.main_tab": "Additional Furniture"
 }

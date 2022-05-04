@@ -5,9 +5,10 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.*    ;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -79,6 +80,20 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> BAOBAB_SAPLING = registerBlock("baobab_sapling",
             () -> new SaplingBlock(new BaobabTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.ADDFUR_TAB);
+
+    public static final RegistryObject<Block> BAOBAB_STAIRS = registerBlock("baobab_stairs",
+            () -> new StairBlock(() -> ModBlocks.BAOBAB_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of(Material.WOOD).strength(5f).requiresCorrectToolForDrops()),
+            ModCreativeModeTab.ADDFUR_TAB);
+    public static final RegistryObject<Block> BAOBAB_SLAB = registerBlock("baobab_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.ADDFUR_TAB);
+    public static final RegistryObject<Block> BAOBAB_FENCE = registerBlock("baobab_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.ADDFUR_TAB);
+    public static final RegistryObject<Block> BAOBAB_FENCE_GATE = registerBlock("baobab_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.ADDFUR_TAB);
 
     //Registration methods
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {

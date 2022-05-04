@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "additionalfurniture:block/baobab_planks",
+    "top": "additionalfurniture:block/baobab_planks",
+    "side": "additionalfurniture:block/baobab_planks"
+  }
+}
